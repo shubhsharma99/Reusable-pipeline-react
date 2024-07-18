@@ -10,7 +10,7 @@ on:
 
 jobs:
   call-reusable:
-    uses: organization-workflows/.github/workflows/reusable-react-ci.yml@main
+    uses: .github/workflows/reusable-react-ci.yml
     with:
       example-input: "Hello from calling workflow"
     secrets:
