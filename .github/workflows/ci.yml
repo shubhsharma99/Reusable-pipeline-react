@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Call reusable workflow
-        uses: ./.github/workflows/reusable-react-ci.yml
+        uses: ./organization-workflows/.github/workflows/reusable-react-ci.yml
         with:
           example-input: "Hello from calling workflow"
         env:
