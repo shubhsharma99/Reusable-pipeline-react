@@ -14,4 +14,4 @@ jobs:
     with:
       example-input: "Hello from calling workflow"
     secrets:
-      example-secret: ${{ secrets.SECRET_FROM_CALLING_REPO }}
+      example-secret: ${{ secrets.MY_SECRET  }}
