@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  call-reusable:
+   workflow_call:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -18,7 +18,7 @@ jobs:
       - name: Call reusable workflow
         uses: ./organization-workflows/.github/workflows/reusable-react-ci.yml
         with:
-          example-input: "Hello from calling workflow"
+          example-input: "hgajhgadjhvdashdsvmsbdv"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
