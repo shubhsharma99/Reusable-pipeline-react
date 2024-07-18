@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  call-reusable:
+    uses: your-organization/organization-workflows/.github/workflows/reusable-react-ci.yml@main
+    with:
+      example-input: "Hello from calling workflow"
+    secrets:
+      example-secret: ${{ secrets.SECRET_FROM_CALLING_REPO }}
