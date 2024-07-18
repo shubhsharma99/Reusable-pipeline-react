@@ -14,4 +14,5 @@ jobs:
     with:
       example-input: "Hello from calling workflow"
     secrets:
-      example-secret: ${{ secrets.MY_SECRET  }}
+      aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
