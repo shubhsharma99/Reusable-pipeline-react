@@ -1,0 +1,27 @@
+name: React Reusable Workflow
+
+on:
+  workflow_call:
+    inputs:
+      react-node-version:
+        description: 'v20.15.1'
+        required: true
+        default: '20.x'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ inputs.v20.15.1 }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the React app
+        run: npm run build
