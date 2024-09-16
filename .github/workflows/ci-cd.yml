@@ -9,4 +9,4 @@ jobs:
   build:
     uses: shubhsharma99/react-app/.github/workflows/react-reusable-workflow.yml@main
     with:
-      react-node-version: '20.x'
+      react-node-version: '20.x'  
