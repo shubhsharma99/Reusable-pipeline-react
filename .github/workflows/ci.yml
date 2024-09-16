@@ -9,11 +9,11 @@ on:
       - main
 
 jobs:
-   workflow_call:
+  ci_job:  # Replace workflow_call with a valid job name
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # Update to the latest version
 
       - name: Call reusable workflow
         uses: ./organization-workflows/.github/workflows/reusable-react-ci.yml
