@@ -1,0 +1,12 @@
+name: CI/CD for React App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    uses: your-org/your-repo/.github/workflows/react-reusable-workflow.yml@main
+    with:
+      react-node-version: '20.x'
